@@ -1,0 +1,12 @@
+- name: Update Dynamic Shift Website
+  hosts: local
+  tasks:
+  - name: Upload files
+    google.cloud.gcp_storage_object:
+      action: upload
+      bucket: dynamic_shift_websit
+      src: Dynamic-shift-website/Dynamic\ Shift\ –\ Move\ Out\ Of\ The\ Ordinary\ AND\ Into\ The\ Extraordinary\!_files
+      dest: test/
+      project: dynamic-shift-409821
+      auth_kind: serviceaccount
+      service_account_file: /Users/mdeangelo/Downloads/dynamic-shift-409821-1e06a74a521e.json
